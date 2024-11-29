@@ -1,0 +1,40 @@
+Problem statement
+Given a non-negative number represented as an array of digits, you have to add 1 to the number, i.e, increment the given number by one.
+The digits are stored such that the most significant digit is at the starting of the array and the least significant digit is at the end of the array.
+
+CODE:
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+def addOneToNumber(arr):
+    # Convert the array of digits to an integer
+    num = int(''.join(map(str, arr)))
+    
+    # Add 1 to the integer
+    num += 1
+
+    # Convert the result back to a list of digits and return
+    return list(map(int, str(num)))
+
+# Reading input
+def main():
+    T = int(input().strip())  # Number of test cases
+    results = []
+
+    for _ in range(T):
+        N = int(input().strip())  # Number of digits in the current test case
+        arr = list(map(int, input().strip().split()))  # The array of digits
+
+        # Compute the result for the current test case
+        result = addOneToNumber(arr)
+        results.append(result)
+
+    # Output all results
+    for result in results:
+        print(*result)
+
+if __name__ == "__main__":
+    main()
+
