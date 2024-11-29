@@ -1,0 +1,45 @@
+Problem Statement:
+
+The n-th term of the Fibonacci series F(n), where F(n) is a function, is calculated using the following formula:
+F(n)=F(n−1)+F(n−2)
+Where:
+F(1) = 1
+F(2) Code:
+
+CODE:
+
+from math import *
+from collections import *
+from sys import *
+from os import *
+
+def fib(n):
+    # Handle base cases
+    if n <= 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    
+    # Initialize first two numbers
+    prev2 = 1  # F(1)
+    prev1 = 1  # F(2)
+    current = 0
+    
+    # Calculate Fibonacci number iteratively
+    for i in range(3, n + 1):
+        current = prev1 + prev2
+        prev2 = prev1
+        prev1 = current
+    
+    return current
+
+# For testing
+def main():
+    # Handle input
+    n = int(input())
+    print(fib(n))
+
+if __name__ == "__main__":
+    main()= 1
+
+
