@@ -1,0 +1,15 @@
+PROBLEM STATEMENT:
+You are given a number 'n'.
+Return number of digits in ‘n’.
+Example:
+Input: 'n' = 123
+Output: 3
+
+CODE:
+def countDigits(n: int) -> int:
+    # Write your code here
+    count = 0
+    while n > 0:
+        count += 1
+        n //= 10
+    return count
