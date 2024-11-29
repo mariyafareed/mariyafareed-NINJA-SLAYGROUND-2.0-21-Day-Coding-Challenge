@@ -1,35 +1,20 @@
-# 🚀 **PROBLEM STATEMENT**:
+Problem Statement:
+Programming languages have some conditional/decision-making statements that execute when a specific condition is fulfilled.
 
-**Programming languages** have some **conditional/decision-making** statements that execute when a **specific condition** is met.
+Switch-case is one of the ways to implement them.
 
-**Switch-case** is one of the ways to implement these.
+In a menu-driven program, the user is given a set of choices to do (the menu) and is asked to select a menu item.
 
-In a **menu-driven program**, the user is presented with a set of options to choose from (the menu) and is then asked to select one.
+There are 2 choices in the menu:
 
-## **📝 MENU CHOICES:**
+Choice 1 is to find the area of a circle having radius 'r'.
+Choice 2 is to find the area of a rectangle having dimensions 'l' and 'b'.
+You are given the choice ch and an array a:
 
-1. **Choice 1**: Calculate the **AREA OF A CIRCLE** using radius `r`.
-2. **Choice 2**: Calculate the **AREA OF A RECTANGLE** with dimensions `l` and `b`.
+If ch is 1, a contains a single number r.
+If ch is 2, a contains 2 numbers l and b
 
----
-
-### **🛠️ INPUT:**
-
-- You are given a **choice `ch`** and an array `a`:
-  - If `ch = 1`, `a` contains a single number `r` (**radius of the circle**).
-  - If `ch = 2`, `a` contains **two numbers**: `l` (**length**) and `b` (**breadth**) of the rectangle.
-
----
-
-### **📏 OUTPUT:**
-
-- Return the **calculated area** based on the choice `ch`, formatted to **5 decimal places**.
-
----
-
-### **💻 CODE:**
-
-```python
+CODE:
 from typing import List
 
 def areaSwitchCase(ch: int, a: List[float]) -> str:
