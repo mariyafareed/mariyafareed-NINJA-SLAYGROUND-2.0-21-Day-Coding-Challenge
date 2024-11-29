@@ -1,0 +1,27 @@
+Problem statement
+You are given an integer array 'A' of size 'N', sorted in non-decreasing order. You are also given an integer 'target'. Your task is to write a function to search for 'target' in the array 'A'. If it exists, return its index in 0-based indexing. If 'target' is not present in the array 'A', return -1.
+
+CODE:
+def search(nums: [int], target: int) -> int:
+    # Initialize the pointers for binary search
+    left, right = 0, len(nums) - 1
+
+    while left <= right:
+        mid = left + (right - left) // 2  # Calculate the mid-point
+        
+        # Check if the mid element is the target
+        if nums[mid] == target:
+            return mid
+        
+        # If target is less than the mid element, move the right pointer
+        elif nums[mid] > target:
+            right = mid - 1
+        
+        # If target is greater than the mid element, move the left pointer
+        else:
+            left = mid + 1
+
+    # If the target is not found, return -1
+    return -1
+
+
