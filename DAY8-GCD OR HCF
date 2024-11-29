@@ -1,0 +1,15 @@
+Problem statement
+You are given two integers 'n', and 'm'.
+Calculate 'gcd(n,m)', without using library functions.
+
+CODE:
+def calcGDC(n: int, m: int) -> int:
+    # Handle edge case
+    if m == 0:
+        return n
+    
+    # Euclidean algorithm
+    while n % m != 0:
+        n, m = m, n % m
+    
+    return m
