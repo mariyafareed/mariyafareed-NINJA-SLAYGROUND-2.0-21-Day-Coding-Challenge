@@ -1,0 +1,16 @@
+Problem statement
+Sam want to read exactly ‘TARGET’ number of pages.
+He has an array ‘BOOK’ containing the number of pages for ‘N’ books.
+Return YES/NO, if it is possible for him to read any 2 books and he can meet his ‘TARGET’ number of pages.
+
+CODE:
+def read(n: int, book: [int], target: int) -> str:
+    seen = set()  # To store the pages of books we have already seen
+    
+    for pages in book:
+        complement = target - pages
+        if complement in seen:
+            return "YES"
+        seen.add(pages)
+    
+    return "NO"
