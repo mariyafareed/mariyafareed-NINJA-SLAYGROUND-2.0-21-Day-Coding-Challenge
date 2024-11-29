@@ -1,27 +1,33 @@
-# Problem Statement:
+# 🚀 **PROBLEM STATEMENT**:
 
-Programming languages have conditional/decision-making statements that execute when a specific condition is met.
+**Programming languages** have some **conditional/decision-making** statements that execute when a **specific condition** is met.
 
-**Switch-case** is one of the ways to implement these conditions.
+**Switch-case** is one of the ways to implement these.
 
-In a menu-driven program, the user is given a set of choices (the menu) and is asked to select an option.
+In a **menu-driven program**, the user is presented with a set of options to choose from (the menu) and is then asked to select one.
 
-There are **2 choices** in the menu:
+## **📝 MENU CHOICES:**
 
-1. **Choice 1**: Find the area of a circle with radius `r`.
-2. **Choice 2**: Find the area of a rectangle with dimensions `l` and `b`.
-
-### Input:
-- You are given the choice `ch` and an array `a`:
-  - If `ch = 1`, `a` contains a single number `r` (radius of the circle).
-  - If `ch = 2`, `a` contains two numbers: `l` (length) and `b` (breadth) of the rectangle.
-
-### Task:
-- Return the area calculated based on the choice `ch`, formatted to 5 decimal places.
+1. **Choice 1**: Calculate the **AREA OF A CIRCLE** using radius `r`.
+2. **Choice 2**: Calculate the **AREA OF A RECTANGLE** with dimensions `l` and `b`.
 
 ---
 
-### Code:
+### **🛠️ INPUT:**
+
+- You are given a **choice `ch`** and an array `a`:
+  - If `ch = 1`, `a` contains a single number `r` (**radius of the circle**).
+  - If `ch = 2`, `a` contains **two numbers**: `l` (**length**) and `b` (**breadth**) of the rectangle.
+
+---
+
+### **📏 OUTPUT:**
+
+- Return the **calculated area** based on the choice `ch`, formatted to **5 decimal places**.
+
+---
+
+### **💻 CODE:**
 
 ```python
 from typing import List
