@@ -1,0 +1,12 @@
+Problem statement
+You are given a sorted array ‘arr’ containing ‘n’ integers and an integer ‘x’.Implement the ‘upper bound’ function to find the index of the upper bound of 'x' in the array.
+CODE:
+def upperBound(arr: [int], x: int, n: int) -> int:
+    low, high = 0, n
+    while low < high:
+        mid = (low + high) // 2
+        if arr[mid] > x:
+            high = mid
+        else:
+            low = mid + 1
+    return low
