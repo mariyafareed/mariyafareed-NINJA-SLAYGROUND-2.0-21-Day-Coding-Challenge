@@ -1,0 +1,12 @@
+Problem statement
+You are given an array 'arr' sorted in non-decreasing order and a number 'x'. You must return the index of the lower bound of 'x'.
+code:
+def lowerBound(arr: [int], n: int, x: int) -> int:
+    left, right = 0, n
+    while left < right:
+        mid = (left + right) // 2
+        if arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid
+    return left
