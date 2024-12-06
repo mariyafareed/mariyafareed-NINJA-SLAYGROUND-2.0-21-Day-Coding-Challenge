@@ -1,0 +1,31 @@
+PROBLEM STATEMENT:
+You have been given an array/list 'arr' consisting of 'n' elements.
+Each element in the array is either 0, 1 or 2.
+Sort this array/list in increasing order.
+Do not make a new array/list. Make changes in the given array/list.
+
+code:
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+def sortArray(arr, n):
+    # Initialize three pointers: low, mid, and high
+    low, mid, high = 0, 0, n - 1
+
+    # Traverse the array until mid <= high
+    while mid <= high:
+        if arr[mid] == 0:
+            # Swap arr[low] and arr[mid], increment both low and mid
+            arr[low], arr[mid] = arr[mid], arr[low]
+            low += 1
+            mid += 1
+        elif arr[mid] == 1:
+            # Move the mid pointer if the value is 1
+            mid += 1
+        else:  # arr[mid] == 2
+            # Swap arr[mid] and arr[high], decrement high
+            arr[mid], arr[high] = arr[high], arr[mid]
+            high -= 1
+	
